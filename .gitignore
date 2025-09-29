@@ -1,0 +1,13 @@
+
+target/
+dbt_packages/
+logs/
+
+.idea/
+
+
+snapshots/
+seeds/
+
+venv-dbt/
+logs

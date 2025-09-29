@@ -1,0 +1,25 @@
+# Project name (lowercase and underscores only)
+name: 'dbt_transformer'
+version: '1.0.0'
+
+# DBT profile to use
+profile: 'dbt_transformer'
+
+# Paths to different types of DBT files
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+# Directories to be removed by `dbt clean`
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+# Configuring models
+# Apply materialization configs to all models inside models/
+models:
+  dbt_transformer:
+    +materialized: view   # or 'table' if you prefer

@@ -1,0 +1,49 @@
+version: 2
+
+models:
+  - name: seven_day_average_of_new_cases
+    description: "Calculates the rolling 7-day average of new COVID-19 cases per country."
+    columns:
+      - name: country_region
+        description: "Country or region name."
+        tests:
+          - not_null
+          - unique
+      - name: report_date
+        description: "Date of the report."
+        tests:
+          - not_null
+      - name: daily_new_cases
+        description: "Number of new confirmed cases on that day."
+      - name: seven_day_avg_cases
+        description: "Rolling 7-day average of daily new cases."
+
+  - name: surge_analysis
+    description: "Analyzes the surge periods in COVID-19 cases for each country."
+    columns:
+      - name: country_region
+        description: "Country or region name."
+        tests:
+          - not_null
+      - name: report_date
+        description: "Date of the report."
+        tests:
+          - not_null
+      - name: daily_new_cases
+        description: "Number of new confirmed cases on that day."
+      - name: surge_flag
+        description: "Indicator if daily cases exceed the surge threshold."
+
+  - name: threshold_dates
+    description: "Identifies key dates like first 1000 cases and surge periods per country."
+    columns:
+      - name: country_region
+        description: "Country or region name."
+        tests:
+          - not_null
+      - name: first_1000_cases_date
+        description: "The date when a country first reported 1000 total confirmed cases."
+      - name: surge_start_date
+        description: "The start date of the surge period."
+      - name: surge_end_date
+        description: "The end date of the surge period."
