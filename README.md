@@ -5,33 +5,10 @@ This project is a COVID-19 Data Transformation and Analysis Pipeline built using
 It transforms raw COVID datasets into clean, analytics-ready tables and provides insights through curated SQL models.
 The project includes multiple transformations for daily, yearly, and country-level COVID trends, allowing data teams to monitor case surges, global rankings, and overall pandemic patterns efficiently.
 
-Project Structure:
-covid_dbt_project/
-│
-├── dbt_project.yml        # Main dbt configuration file
-├── dbt_transformer/       # Folder containing dbt models, macros, and logs
-│   ├── analyses/
-│   ├── macros/
-│   ├── models/
-│   │   └── example/
-│   │       ├── daily_new_cases_by_country.sql
-│   │       ├── daily_new_deaths_by_country.sql
-│   │       ├── daily_stats.sql
-│   │       ├── seven_day_average_of_new_cases.sql
-│   │       ├── country_rankings_for_new_cases_one_day.sql
-│   │       ├── country_rankings_for_new_cases_monthly.sql
-│   │       ├── country_rankings_for_new_cases_yearly.sql
-│   │       ├── surge_analysis.sql
-│   │       └── threshold_dates.sql
-│   └── logs/
-├── seeds/                 # Optional CSV data files
-├── snapshots/             # For tracking historical data
-├── target/                # Auto-generated dbt outputs and docs
-├── tests/                 # dbt schema and data tests
-└── Output_Images/         # Visualization or output reports
-
 Example Models and Their Purpose:
+
 Model File	Description:
+
 daily_new_cases_by_country.sql |	Calculates new daily COVID-19 cases per country.
 daily_new_deaths_by_country.sql |	Tracks daily new deaths reported by each country.
 daily_stats.sql |	Combines key daily statistics (cases, deaths, recoveries).
