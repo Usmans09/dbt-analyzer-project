@@ -5,7 +5,7 @@ This project is a COVID-19 Data Transformation and Analysis Pipeline built using
 It transforms raw COVID datasets into clean, analytics-ready tables and provides insights through curated SQL models.
 The project includes multiple transformations for daily, yearly, and country-level COVID trends, allowing data teams to monitor case surges, global rankings, and overall pandemic patterns efficiently.
 
-Project Structure:.
+Project Structure:
 covid_dbt_project/
 │
 ├── dbt_project.yml        # Main dbt configuration file
